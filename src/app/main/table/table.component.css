@@ -1,0 +1,47 @@
+table {
+  width: 100%;
+}
+
+table .thead_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  border-bottom: 1px solid #bebebe;
+}
+
+table td {
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+}
+
+table td:first-child {
+  width: 60px;
+}
+
+table td:nth-child(2) {
+  width: 120px;
+  text-align: left;
+}
+
+table td:nth-child(3) {
+  width: 120px;
+  text-align: left;
+}
+
+table td:nth-child(4) {
+  width: 419px;
+  text-align: center;
+}
+
+table td:nth-child(5) {
+  width: 150px;
+  text-align: center;
+}
+
+table td:nth-child(6) {
+  width: 150px;
+  text-align: center;
+}
+/*# sourceMappingURL=table.component.css.map */

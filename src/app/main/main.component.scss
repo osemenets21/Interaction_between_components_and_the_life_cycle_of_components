@@ -1,0 +1,33 @@
+
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    border-bottom: 1px solid rgb(190, 190, 190);
+    padding-bottom: 10px;
+}
+
+.wrapper {
+    display: flex;
+    padding: 15px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    button {
+        width: 14%;
+        height: 25px;
+        border: 1px solid rgb(190, 190, 190);
+        border-radius: 5px;
+        background-color: rgb(22, 195, 22);
+        color: white;
+    }
+    input {
+        width: 85%;
+        outline: none;
+        border: 1px solid rgb(190, 190, 190);
+        border-radius: 5px;
+        height: 25px;
+        background-color: white; 
+    }
+}

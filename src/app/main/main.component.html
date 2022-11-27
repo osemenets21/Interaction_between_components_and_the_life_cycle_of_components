@@ -1,0 +1,8 @@
+<h2>Plan your day!</h2>
+<h3>User: {{ userName }}. Count of Task: {{ count }}</h3>
+<div class="wrapper">
+  <input type="text" [(ngModel)]="newTask"/>
+  <button (click)="clickBtnNewTask()">Add</button>
+</div>
+
+<app-table></app-table>
