@@ -2,7 +2,7 @@ table {
   width: 100%;
 }
 
-table .thead_row {
+table thead .thead_row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,38 +10,95 @@ table .thead_row {
   border-bottom: 1px solid #bebebe;
 }
 
-table td {
+table thead td {
   font-weight: 600;
   text-align: center;
   line-height: 40px;
 }
 
-table td:first-child {
+table thead td:first-child {
   width: 60px;
 }
 
-table td:nth-child(2) {
+table thead td:nth-child(2) {
   width: 120px;
   text-align: left;
 }
 
-table td:nth-child(3) {
+table thead td:nth-child(3) {
   width: 120px;
   text-align: left;
 }
 
-table td:nth-child(4) {
+table thead td:nth-child(4) {
   width: 419px;
   text-align: center;
 }
 
-table td:nth-child(5) {
+table thead td:nth-child(5) {
   width: 150px;
   text-align: center;
 }
 
-table td:nth-child(6) {
+table thead td:nth-child(6) {
   width: 150px;
   text-align: center;
+}
+
+table tbody .tbody_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  border-bottom: 1px solid #959595;
+}
+
+table tbody td {
+  font-weight: 200;
+  text-align: center;
+  line-height: 40px;
+}
+
+table tbody td:first-child {
+  width: 60px;
+}
+
+table tbody td:nth-child(2) {
+  width: 120px;
+  text-align: left;
+}
+
+table tbody td:nth-child(3) {
+  padding-left: 17px;
+  width: 120px;
+  text-align: left;
+}
+
+table tbody td:nth-child(4) {
+  width: 419px;
+  text-align: center;
+}
+
+table tbody td:nth-child(5) {
+  width: 150px;
+  text-align: center;
+}
+
+table tbody td:nth-child(6) {
+  width: 150px;
+  text-align: center;
+}
+
+table tbody .editBtn, table tbody .deleteBtn {
+  width: 70px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffb811;
+  cursor: pointer;
+}
+
+table tbody .deleteBtn {
+  background-color: #f44545;
 }
 /*# sourceMappingURL=table.component.css.map */

@@ -1,37 +1,105 @@
 table {
     width: 100%;
-    .thead_row {
-        display: flex;
-        height: 40px;
-        border-bottom: 1px solid rgb(190, 190, 190);
+
+    thead {
+        .thead_row {
+            display: flex;
+            height: 40px;
+            border-bottom: 1px solid rgb(190, 190, 190);
+        }
+
+        td {
+            font-weight: 600;
+            text-align: center;
+            line-height: 40px;
+
+            &:first-child {
+                width: 60px;
+            }
+
+            &:nth-child(2) {
+                width: 120px;
+                text-align: left;
+            }
+
+            &:nth-child(3) {
+                width: 120px;
+                text-align: left;
+            }
+
+            &:nth-child(4) {
+                width: 419px;
+                text-align: center;
+            }
+
+            &:nth-child(5) {
+                width: 150px;
+                text-align: center;
+            }
+
+            &:nth-child(6) {
+                width: 150px;
+                text-align: center;
+            }
+        }
     }
-    td {
-        font-weight: 600;
-        text-align: center;
-        line-height: 40px;
-        &:first-child {
-            width: 60px;
+
+    tbody {
+        .tbody_row {
+            display: flex;
+            height: 40px;
+            border-bottom: 1px solid rgb(149, 149, 149);
         }
-        &:nth-child(2) {
-            width: 120px;
-            text-align: left;
-        }
-        &:nth-child(3) {
-            width: 120px;
-            text-align: left;
-        }
-        &:nth-child(4) {
-            width: 419px;
+        td {
+            font-weight: 200;
             text-align: center;
+            line-height: 40px;
+
+            &:first-child {
+                width: 60px;
+            }
+
+            &:nth-child(2) {
+                width: 120px;
+                text-align: left;
+            }
+
+            &:nth-child(3) {
+                padding-left: 17px;
+                width: 120px;
+                text-align: left;
+            }
+
+            &:nth-child(4) {
+                width: 419px;
+                text-align: center;
+            }
+
+            &:nth-child(5) {
+                width: 150px;
+                text-align: center;
+            }
+
+            &:nth-child(6) {
+                width: 150px;
+                text-align: center;
+            }
         }
-        &:nth-child(5) {
-            width: 150px;
-            text-align: center;
+        .editBtn {
+            width: 70px;
+            height: 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(255, 184, 17);
+            cursor: pointer;
+         
         }
-        &:nth-child(6) {
-            width: 150px;
-            text-align: center;
+        .deleteBtn {
+            @extend .editBtn;
+            background-color: rgb(244, 69, 69);
+            
         }
     }
-    
+
+
 }

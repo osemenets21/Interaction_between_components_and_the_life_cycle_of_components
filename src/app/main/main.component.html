@@ -1,8 +1,27 @@
-<h2>Plan your day!</h2>
-<h3>User: {{ userName }}. Count of Task: {{ count }}</h3>
-<div class="wrapper">
-  <input type="text" [(ngModel)]="newTask"/>
-  <button (click)="clickBtnNewTask()">Add</button>
-</div>
+<div class="task">
+  <h2>Plan your day!</h2>
+  <h3>User: {{ user }}. Count of Task: {{ count }}</h3>
+  <div class="wrapper">
+    <input type="text" class="task__input" [(ngModel)]="pushName" />
+    <button (click)="addName()" type="button" class="task__addBtn" value="Add">
+      Add
+    </button>
+  </div>
 
-<app-table></app-table>
+  <app-table
+    [newTask]="taskName"
+    (countLength)="getlength($event)"
+    (changeTask)="getName($event)"
+  >
+  </app-table>
+
+  <div *ngIf="save" class="task__change">
+    <input type="text" class="task__change__input" [(ngModel)]="getTask" />
+    <input
+      type="button"
+      class="task__change__btn"
+      value="save"
+      (click)="reName()"
+    />
+  </div>
+</div>

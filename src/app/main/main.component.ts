@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TableComponent } from './table/table.component';
 
 @Component({
   selector: 'app-main',
@@ -6,18 +7,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
-  public newTask!: string;
-  public count: number = 0;
-  public userName: string = 'Ivan Ivanov';
+  @ViewChild(TableComponent) childTable!: TableComponent;
+
+  public user = 'Ivan Ivanov';
+  public count = 0;
+  public taskName!: string;
+  public save = false;
+  public pushName!: string;
+  public getTask!: string;
+  public index!: number;
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  clickBtnNewTask() {
-    const objTask: Object = {
-      task: this.newTask,
-      status: false,
-    };
+  addName(): void {
+    this.taskName = this.pushName;
+    this.pushName = '';
+  }
+  getName(index: number): void {
+    this.save = true;
+    this.getTask = this.childTable.taskList[index].name;
+    this.index = index;
+  }
+  getlength(length: number) {
+    setTimeout(() => {
+      this.count = length;
+    });
+  }
+  reName(): void {
+    this.childTable.taskList[this.index].name = this.getTask;
+    this.getTask = '';
+    this.save = false;
   }
 }

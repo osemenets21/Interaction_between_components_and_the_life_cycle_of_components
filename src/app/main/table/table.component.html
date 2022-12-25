@@ -1,13 +1,41 @@
 <table>
-    <thead>
-        <tr class="thead_row">
-            <td>#</td>
-            <td>Task</td>
-            <td>Check</td>
-            <td>DONE/IN PROGRESS</td>
-            <td>Edit</td>
-            <td>Delete</td>
-        </tr>
-    </thead>
-    <tbody></tbody>
+  <thead>
+    <tr class="thead_row">
+      <td>#</td>
+      <td>Task</td>
+      <td>Check</td>
+      <td>DONE/IN PROGRESS</td>
+      <td>Edit</td>
+      <td>Delete</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="tbody_row" *ngFor="let task of taskList; index as i">
+      <td>{{ i + 1 }}</td>
+      <td class="nameTask">{{ task.name }}</td>
+      <td>
+        <input type="checkbox" [checked]="task.check" (click)="checkbox(i)" />
+      </td>
+      <td *ngIf="!task.check" class="progress">In progress</td>
+      <td *ngIf="task.check" class="done">Done</td>
+      <td>
+        <input
+          type="button"
+          class="editBtn"
+          (click)="editUser(i)"
+          value="Edit"
+          [disabled]="task.check"
+        />
+      </td>
+      <td>
+        <input
+          type="button"
+          class="deleteBtn"
+          (click)="deleteUser(i)"
+          value="Delete"
+          [disabled]="!task.check"
+        />
+      </td>
+    </tr>
+  </tbody>
 </table>
